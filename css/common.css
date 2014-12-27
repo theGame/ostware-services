@@ -1,0 +1,10 @@
+/* Landscape phone to portrait tablet */
+@media (max-width: 800px) {
+	tr td:last-child, tr th:last-child {
+		display: none;
+		width: 0;
+	}
+	tr td:first-child, tr th:first-child{
+		width: 50%;
+	}
+}
