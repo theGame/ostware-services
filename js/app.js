@@ -82,10 +82,12 @@ $( document ).ready(function() {
       },
       beforeClose: function (event, ui) {
             $("#dialog p").empty();
-        }
+        }, 
+        closeOnEscape: true,
+        modal: true
     });
  
-    $( document ).on('click touchstart', '#table_id tbody tr', function() {
+    $( document ).on('click', '#table_id tbody tr', function() {
       $( "#dialog" ).dialog( "open" );
       firstName = $(this).find('.sorting_1').text();
       lastName = $(this).find('td + td').html();
@@ -100,7 +102,6 @@ $( document ).ready(function() {
       });
       $('#dialog p').append(first + ', ' + last + ', ' + birthday + ', ' + gender);
     });
-
     //init table
     $('#table_id').DataTable();
 });
